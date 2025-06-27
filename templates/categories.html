@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="h-20"></div>
+
+<section class="min-h-screen bg-gray-900 px-6 py-12">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10">Explore Dare Categories</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- FUN -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">🎭</div>
+        <h3 class="text-2xl font-semibold mb-2">Fun</h3>
+        <p class="text-gray-300 mb-4">Lighthearted, crazy, and hilarious dares to challenge your friends.</p>
+        <a href="/category/fun" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+
+      <!-- SKILL -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">🧠</div>
+        <h3 class="text-2xl font-semibold mb-2">Skill</h3>
+        <p class="text-gray-300 mb-4">Show off talents like dancing, coding, singing, and more.</p>
+        <a href="/category/skill" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">💬</div>
+        <h3 class="text-2xl font-semibold mb-2">Social</h3>
+        <p class="text-gray-300 mb-4">Interact with strangers, post online, or gather public reactions.</p>
+        <a href="/category/social" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+
+      <!-- PRANK -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">🎥</div>
+        <h3 class="text-2xl font-semibold mb-2">Prank</h3>
+        <p class="text-gray-300 mb-4">Funny pranks and surprising challenges to pull on your friends.</p>
+        <a href="/category/prank" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+
+      <!-- ADVENTURE -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">🏞️</div>
+        <h3 class="text-2xl font-semibold mb-2">Adventure</h3>
+        <p class="text-gray-300 mb-4">Outdoor challenges like trekking, biking, or night dares.</p>
+        <a href="/category/adventure" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+
+      <!-- MYSTERY -->
+      <div class="bg-gray-800 p-6 rounded-2xl hover:bg-red-600 transition">
+        <div class="text-4xl mb-4">🕵️‍♂️</div>
+        <h3 class="text-2xl font-semibold mb-2">Mystery</h3>
+        <p class="text-gray-300 mb-4">Solve clues, complete secret missions, or escape scenarios.</p>
+        <a href="/category/mystery" class="text-sm text-white bg-black px-4 py-2 rounded hover:bg-gray-700">Explore</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

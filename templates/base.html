@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Dare Exchange</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Archivo Black', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <header class="bg-black border-b border-gray-800 fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <a href="{% url 'home' %}" class="text-2xl font-bold text-white">🎯 DareX</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-sm uppercase font-semibold text-white">
+      <a href="{% url 'home' %}" class="hover:text-red-500">Home</a>
+      <a href="{% url "categories" %}" class="hover:text-red-500">Categories</a>
+      <a href="#recent" class="hover:text-red-500">Dares</a>
+      <a href="#leaderboard" class="hover:text-red-500">Leaderboard</a>
+    </nav>
+
+    <!-- Auth / Session Info -->
+    <div class="hidden md:flex items-center space-x-4">
+      {% if request.session.loggedin %}
+        <!-- Username Show -->
+        <a href="{% url "profile" %}" class="text-white font-semibold">👤 {{ request.session.username }}</a>
+        <a href="{% url 'logout' %}" class="px-4 py-2 border border-red-500 text-red-500 rounded-full hover:bg-red-600 hover:text-white transition">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="px-4 py-2 border border-white text-white rounded-full hover:bg-white hover:text-black transition">Login</a>
+        <a href="{% url 'signup' %}" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition">Sign Up</a>
+      {% endif %}
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobileMenuBtn" class="text-white text-2xl">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobileMenu" class="md:hidden hidden bg-black text-white px-6 py-4 space-y-4">
+    <a href="{% url 'home' %}" class="block hover:text-red-500">Home</a>
+    <a href="#categories" class="block hover:text-red-500">Categories</a>
+    <a href="#recent" class="block hover:text-red-500">Dares</a>
+    <a href="#leaderboard" class="block hover:text-red-500">Leaderboard</a>
+
+    {% if request.session.loggedin %}
+      <span class="block text-white font-semibold">👤 {{ request.session.username }}</span>
+      <a href="{% url 'logout' %}" class="block text-red-500 hover:underline">Logout</a>
+    {% else %}
+      <a href="{% url 'login' %}" class="block hover:text-red-500">Login</a>
+      <a href="{% url 'signup' %}" class="block hover:text-red-500">Sign Up</a>
+    {% endif %}
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
+    {% block body %}
+    {% endblock %}
+  <!-- FOOTER -->
+  <footer class="py-10 bg-black text-center text-gray-400 text-sm">
+    © 2025 College Dare Exchange. Made with ❤️ for students.  
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:text-white">About</a>
+      <a href="#" class="hover:text-white">Contact</a>
+      <a href="#" class="hover:text-white">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>

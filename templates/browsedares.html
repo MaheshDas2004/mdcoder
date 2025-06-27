@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="h-20"></div>
+
+<!-- Browse Dares -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <div class="flex justify-between items-center mb-10">
+    <h1 class="text-3xl font-bold tracking-wide uppercase">🔥 Browse Public Dares</h1>
+    
+    <!-- Create Dare CTA Button -->
+    <a href="/create-dare" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-lg text-sm font-medium shadow">
+      + Create Dare
+    </a>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Sample Dare Cards (Already there) -->
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 flex flex-col justify-between hover:shadow-red-600 transition">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">🚨 Dance in the Cafeteria</h2>
+        <p class="text-sm text-gray-400 mb-2">Created by <span class="text-white">Ravi</span> · June 20, 2025</p>
+        <span class="inline-block px-2 py-1 text-xs rounded bg-yellow-500 text-black font-semibold">Pending</span>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/dares/1" class="px-4 py-2 text-sm border border-white rounded hover:bg-white hover:text-black transition">View</a>
+        <a href="/dares/1/edit" class="px-4 py-2 text-sm border border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition">Edit</a>
+        <button class="px-4 py-2 text-sm border border-red-800 text-red-500 rounded hover:bg-red-800 hover:text-white transition">Delete</button>
+      </div>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 flex flex-col justify-between hover:shadow-red-600 transition">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">💘 Propose to a Stranger</h2>
+        <p class="text-sm text-gray-400 mb-2">Created by <span class="text-white">Simran</span> · June 19, 2025</p>
+        <span class="inline-block px-2 py-1 text-xs rounded bg-green-500 text-black font-semibold">Completed</span>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/dares/2" class="px-4 py-2 text-sm border border-white rounded hover:bg-white hover:text-black transition">View</a>
+        <a href="/dares/2/edit" class="px-4 py-2 text-sm border border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white transition">Edit</a>
+        <button class="px-4 py-2 text-sm border border-red-800 text-red-500 rounded hover:bg-red-800 hover:text-white transition">Delete</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Optional Bottom CTA Section -->
+<section class="py-16 text-center bg-gray-900">
+  <h2 class="text-2xl font-semibold text-white mb-4">Got a crazy idea?</h2>
+  <p class="text-gray-400 mb-6">Don't just watch. Create your own dare and let others take it on!</p>
+  <a href="/create-dare" class="px-6 py-3 bg-red-600 text-white rounded-full text-sm hover:bg-red-700 transition">
+    🚀 Post Your Dare
+  </a>
+</section>
+
+{% endblock body %}
