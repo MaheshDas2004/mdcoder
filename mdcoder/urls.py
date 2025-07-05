@@ -29,8 +29,7 @@ urlpatterns = [
     # path('about/', views.about),
     # path('login/', views.login, name='login'),
     path('categories/', views.categories, name='categories'),
-    # path('logout/', views.logout, name='logout'),
+    path('logout/', views.logout, name='logout'),
     # path('profile/', views.profile, name='profile'),
-    # path('signup/', views.signup,name='signup'),
-    # path('browsedares/', views.browsedares),
+    path('browsedares/', views.browsedares),
 ]
